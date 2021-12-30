@@ -1,0 +1,81 @@
+
+  <mat-toolbar color='warn' class="header">
+    <mat-icon>dashboard</mat-icon>
+   <span>Registration Form</span>
+   <a [routerLink]="['/login']" class="login">Login</a>
+ </mat-toolbar>
+<div class="background"> 
+    <div class="main">
+        <div class="forms">
+            <form [formGroup]="signupform" (ngSubmit)="submitForm()" class="example-form">
+                <div class="feild">
+                    <mat-form-field appearance="outline" color="warn">
+                        <mat-label>FirstName</mat-label>
+                        <input matInput placeholder="FirstName" formControlName="firstname">
+                    </mat-form-field><br>
+                </div>
+                <div class="feild">
+                    <mat-form-field appearance="outline" color="warn">
+                        <mat-label>LastName</mat-label>
+                        <input matInput placeholder="LastName" formControlName="lastname">
+                    </mat-form-field><br>
+                </div>
+                <div class="feild">
+                    <mat-form-field appearance="outline" color="warn">
+                        <mat-label>Email</mat-label>
+                        <input type="email" matInput placeholder="Email" formControlName="email">
+                    </mat-form-field><br>
+                </div>
+                <div class="feild">
+                    <mat-form-field appearance="outline" color="warn">
+                        <mat-label>Password</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field><br>
+                </div>
+
+
+                <!-- <div class="feild">     
+                    <mat-form-field appearance="outline">
+                        <mat-label>Phone Number</mat-label>
+                        <input type="tel" matInput placeholder="Phone Number" formControlName="phonenumber">
+                    </mat-form-field><br>
+                </div>  
+                <div class="feild">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Address</mat-label>
+                        <textarea matInput placeholder="Address" formControlName="address"></textarea>
+                    </mat-form-field><br>
+                </div>
+                <div class="feild">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Pincode</mat-label>
+                        <input type="pincode" matInput placeholder="Pincode" formControlName="pincode">
+                    </mat-form-field><br>
+                </div>
+                <div class="feild">
+                    <mat-radio-group color="primary" formControlName="gender">
+                        <mat-label>Gender</mat-label><br>
+                        <mat-radio-button value="male">Male</mat-radio-button>
+                        <mat-radio-button value="female">Female</mat-radio-button>
+                    </mat-radio-group><br>
+                    <br>
+                </div>    
+                 -->
+                <!-- <mat-checkbox formControlName="accept">Accept T&C</mat-checkbox> -->
+
+
+                <div class="feild">
+                    <button type="submit" mat-raised-button color="warn" class="btn">Submit</button>
+                </div>
+            
+            </form>
+        </div>
+            <div class="image">
+                <img class="photo" src ="./assets/images/1.jpg" alt="image">
+            </div>
+    </div>
+    
+</div>

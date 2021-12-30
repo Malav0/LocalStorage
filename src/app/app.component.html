@@ -1,4 +1,4 @@
-<label>Enter Data</label><br>
+<!-- <label>Enter Data</label><br>
 <input type="text"[(ngModel)]="selectvalue"><br>
 
 <button (click)="setData()">SetData</button><br>
@@ -6,3 +6,11 @@
 <button (click)="updateData()">Update</button><br>
 <button (click)="deleteData()">Delete</button><br>
 <button (click)="getData()">Get</button><br>
+
+<div>
+    <button [routerLink]="['/company']">Company</button><br>
+    <br>
+    <button [routerLink]="['/person']">Person</button>
+</div> -->
+<app-signup></app-signup>
+<router-outlet></router-outlet>
