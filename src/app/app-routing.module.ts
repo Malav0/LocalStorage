@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CompanyComponent } from './company/company.component';
 import { LoginComponent } from './login/login.component';
 import { PersonComponent } from './person/person.component';
+import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
   // {
@@ -12,7 +13,13 @@ const routes: Routes = [
   //   path:'person', component:PersonComponent
   // }
   {
+     path: "", pathMatch: "full", redirectTo: "login" 
+  },
+  {
     path:'login', component:LoginComponent
+  },
+  {
+    path:'signup', component:SignupComponent
   }
 ];
 
